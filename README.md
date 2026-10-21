@@ -2,6 +2,10 @@
 ### Group Project Group T
 ---
 
+### topic chosen
+- goal 3 health and wellbeing
+- out application is a fitness app
+
 #### plan
 - AK
     - recycling management app
