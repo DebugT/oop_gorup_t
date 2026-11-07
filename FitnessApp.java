@@ -14,7 +14,8 @@ public class FitnessApp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // Main App Class
+        //main app class - I will  update soon
+        
     }
     
 }
