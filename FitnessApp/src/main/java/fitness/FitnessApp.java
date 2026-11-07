@@ -11,6 +11,9 @@ package fitness;
 public class FitnessApp {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+        FitnessMenu menu = new FitnessMenu(); // create object our window
+        menu.setVisible(true); // show our window
+        
     }
 }
