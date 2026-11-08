@@ -35,6 +35,7 @@ public class FitnessMenu extends JFrame {
         
         titleLabel = new JLabel("Fitness Tracker");
         titleLabel.setFont(new Font("Arial", Font.BOLD, 20));
+        
         //------------------------------------------------------
         addButton = new JButton("Add Workout");
         addButton.setFocusPainted(false); // remove border near text
@@ -51,14 +52,19 @@ public class FitnessMenu extends JFrame {
         returnButton.setBackground(new Color(255, 255, 255));
         returnButton.setForeground(Color.BLACK);
         
-        titleLabel.setBounds(175, 40, 200, 30);
-        addButton.setBounds(150, 120, 200, 40);
-        historyButton.setBounds(150, 180, 200, 40);
-        returnButton.setBounds(150, 360, 200, 40);
+         // configure our cordinates
+        
+        titleLabel.setBounds(175, 10, 200, 30);
+        
+        addButton.setBounds(150, 120, 200, 60);
+        historyButton.setBounds(150, 220, 200, 60);
+        
+        returnButton.setBounds(150, 380, 200, 40);
         
         p.add(titleLabel);
         p.add(addButton);
         p.add(historyButton);
+        
         p.add(returnButton);
 
  }
