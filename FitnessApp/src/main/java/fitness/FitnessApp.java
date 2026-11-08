@@ -15,5 +15,8 @@ public class FitnessApp {
         FitnessMenu menu = new FitnessMenu(); // create object our window
         menu.setVisible(true); // show our window
         
+        AddWorkout workout = new AddWorkout();
+        workout.setVisible(true);
+        
     }
 }
