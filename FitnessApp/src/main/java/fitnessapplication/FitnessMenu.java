@@ -8,7 +8,7 @@
  * @author Sasha-Clover
  */
 
-package fitness;
+package fitnessapplication;
 
 import javax.swing.*;
 import java.awt.event.*; // listener for buttons
