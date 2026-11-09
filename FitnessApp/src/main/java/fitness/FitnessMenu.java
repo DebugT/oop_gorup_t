@@ -85,6 +85,14 @@ public class FitnessMenu extends JFrame {
         }
 
      });
+     
+        returnButton.addActionListener(new ActionListener() {
+
+        public void actionPerformed(ActionEvent event) {
+             returnButtonActionPerformed(event);
+    }
+
+});
 
  }
     //--------------------------------
@@ -102,6 +110,14 @@ public class FitnessMenu extends JFrame {
         setVisible(false); // "close" our fitnessmenu window
 
     }
+      
+      private void returnButtonActionPerformed(ActionEvent event) {
+
+        MainMenu menu = new MainMenu();
+        menu.setVisible(true);
+        setVisible(false);
+
+}
     //----------------------------------
       
 }
