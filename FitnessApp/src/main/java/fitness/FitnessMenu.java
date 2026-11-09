@@ -11,6 +11,7 @@
 package fitness;
 
 import javax.swing.*;
+import java.awt.event.*; // listener for buttons
 import java.awt.Color; // settings for color
 import java.awt.Font; // settings for font
 
@@ -66,7 +67,41 @@ public class FitnessMenu extends JFrame {
         p.add(historyButton);
         
         p.add(returnButton);
+        
+        //-----
+        
+        addButton.addActionListener(new ActionListener() { // listener-event
+
+          public void actionPerformed(ActionEvent event) {
+             addButtonActionPerformed(event);
+        }
+
+     });
+        //-----
+        historyButton.addActionListener(new ActionListener() {
+
+          public void actionPerformed(ActionEvent event) {
+             historyButtonActionPerformed(event);
+        }
+
+     });
 
  }
+    //--------------------------------
+      private void addButtonActionPerformed(ActionEvent event) {
+
+        AddWorkout workout = new AddWorkout();
+        workout.setVisible(true); // "show" our new window
+        setVisible(false); // "close" our fitnessmenu window
+
+    }
+      private void historyButtonActionPerformed(ActionEvent event) {
+
+        WorkoutHistory history = new WorkoutHistory();
+        history.setVisible(true); // "show" our new window
+        setVisible(false); // "close" our fitnessmenu window
+
+    }
+    //----------------------------------
       
 }

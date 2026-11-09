@@ -5,6 +5,7 @@
 package fitness;
 
 import javax.swing.*;
+import java.awt.event.*; // listener for buttons
 import java.awt.Color; // settings for color
 import java.awt.Font; // settings for font
 
@@ -117,7 +118,25 @@ public class AddWorkout extends JFrame {
         p.add(saveButton);
         
         p.add(returnButton);
+        
+        //-----------------------
+        returnButton.addActionListener(new ActionListener() { // listener-event
+
+          public void actionPerformed(ActionEvent event) {
+             returnButtonActionPerformed(event);
+        }
+
+     });
 
 }
+    
+        //--------------------------------
+        private void returnButtonActionPerformed(ActionEvent event) {
+
+          FitnessMenu menu = new FitnessMenu();
+          menu.setVisible(true); // "show" our new window
+          setVisible(false); // "close" our current window
+
+    }
     
 }

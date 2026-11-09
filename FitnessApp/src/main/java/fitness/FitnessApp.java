@@ -16,7 +16,10 @@ public class FitnessApp {
         menu.setVisible(true); // show our window
         
         AddWorkout workout = new AddWorkout();
-        workout.setVisible(true);
+        workout.setVisible(false);
+        
+        WorkoutHistory history = new WorkoutHistory();
+        history.setVisible(false);
         
     }
 }
