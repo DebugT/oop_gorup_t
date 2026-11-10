@@ -31,7 +31,7 @@ public class NutritionGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        mainLabel = new javax.swing.JLabel();
         caloriesBtn = new javax.swing.JButton();
         logBtn = new javax.swing.JButton();
         backBtn = new javax.swing.JButton();
@@ -40,7 +40,8 @@ public class NutritionGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Nutrition Menu");
+        mainLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        mainLabel.setText("Nutrition Menu");
 
         caloriesBtn.setText("Calories Tracker");
         caloriesBtn.addActionListener(this::caloriesBtnActionPerformed);
@@ -56,26 +57,27 @@ public class NutritionGUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(154, 154, 154)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(backBtn)
-                    .addComponent(logBtn)
-                    .addComponent(caloriesBtn)
-                    .addComponent(jLabel1))
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(171, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(mainLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(caloriesBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(logBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(backBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(171, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(jLabel1)
+                .addComponent(mainLabel)
                 .addGap(35, 35, 35)
                 .addComponent(caloriesBtn)
                 .addGap(18, 18, 18)
                 .addComponent(logBtn)
                 .addGap(45, 45, 45)
                 .addComponent(backBtn)
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addGap(50, 50, 50))
         );
 
         pack();
@@ -131,7 +133,7 @@ public class NutritionGUI extends javax.swing.JFrame {
     private javax.swing.JButton backBtn;
     private javax.swing.JButton caloriesBtn;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JButton logBtn;
+    private javax.swing.JLabel mainLabel;
     // End of variables declaration//GEN-END:variables
 }
