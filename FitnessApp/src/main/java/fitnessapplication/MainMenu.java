@@ -4,6 +4,8 @@
  */
 package fitnessapplication;
 
+import nutrition.NutritionGUI;
+
 /**
  *
  * @authors Alexander Kirichenko, Andrei Grigorita, Tristan Bradley Odhiambo
