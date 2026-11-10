@@ -16,6 +16,9 @@ public class FitnessApp {
     public static void main(String[] args) {
         //main app class - I will  update soon
         
+        //GUI
+        SleepMenuGUI myGui = new SleepMenuGUI();
+        myGui.setVisible(true);
     }
     
 }
