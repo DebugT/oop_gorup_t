@@ -19,6 +19,7 @@ public class FitnessApp {
         //GUI
         SleepMenuGUI myGui = new SleepMenuGUI();
         myGui.setVisible(true);
+
     }
     
 }
