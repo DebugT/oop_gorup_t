@@ -1,54 +1,52 @@
 <mxfile host="app.diagrams.net">
-  <diagram name="Page-1" id="TABckR5fp8T5n3-vJaU7">
+  <diagram name="Page-1" id="prPL7KNy8cZXvU66eVZL">
     <mxGraphModel dx="1597" dy="888" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <object label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Calories&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&amp;nbsp;# username:String&lt;div&gt;&amp;nbsp;# password:String&lt;/div&gt;&lt;div&gt;&amp;nbsp;# name:String&lt;/div&gt;&lt;div&gt;&amp;nbsp;# id:String&lt;/div&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Calories(username:String, password:String, name:String, id:String)&lt;/p&gt;" fwafw="" id="wrpc7QFHN6ifa1H8zkVl-6">
+        <object label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Calories&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&amp;nbsp;# username:String&lt;div&gt;&amp;nbsp;# password:String&lt;/div&gt;&lt;div&gt;&amp;nbsp;# name:String&lt;/div&gt;&lt;div&gt;&amp;nbsp;# id:String&lt;/div&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Calories(username:String, password:String, name:String, id:String)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ setUsername():void&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ setPassword():void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ setName():void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ setId():void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ getUsername():String&lt;/div&gt;&lt;div&gt;&lt;div&gt;&amp;nbsp;+ getPassword():String&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ getName():String&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ getId():String&lt;/div&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;br&gt;&lt;/div&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" fwafw="" id="rgjosycCsPLYyy95wvTC-2">
           <mxCell parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;rounded=0;shadow=0;glass=0;multiple=0;fontFamily=Lucida Console;" vertex="1">
-            <mxGeometry height="210" width="410" x="1250" y="890" as="geometry" />
+            <mxGeometry height="360" width="410" x="460" y="290" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="wrpc7QFHN6ifa1H8zkVl-7" edge="1" parent="1" source="wrpc7QFHN6ifa1H8zkVl-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;" target="wrpc7QFHN6ifa1H8zkVl-11" value="">
-          <mxGeometry relative="1" x="-0.0164" as="geometry">
+        <mxCell id="rgjosycCsPLYyy95wvTC-3" edge="1" parent="1" source="rgjosycCsPLYyy95wvTC-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;" target="rgjosycCsPLYyy95wvTC-7" value="">
+          <mxGeometry relative="1" x="-0.78" as="geometry">
             <Array as="points">
-              <mxPoint x="1195" y="960" />
-              <mxPoint x="760" y="960" />
+              <mxPoint x="270" y="530" />
+              <mxPoint x="80" y="530" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="wrpc7QFHN6ifa1H8zkVl-8" edge="1" parent="1" source="wrpc7QFHN6ifa1H8zkVl-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;" target="wrpc7QFHN6ifa1H8zkVl-13" value="">
+        <mxCell id="rgjosycCsPLYyy95wvTC-4" edge="1" parent="1" source="rgjosycCsPLYyy95wvTC-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;" target="rgjosycCsPLYyy95wvTC-9" value="">
           <mxGeometry relative="1" x="0.5716" as="geometry">
             <Array as="points">
-              <mxPoint x="1195" y="850" />
-              <mxPoint x="1720" y="850" />
+              <mxPoint x="1020" y="240" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="wrpc7QFHN6ifa1H8zkVl-9" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;autosizeText=0;fontSize=12;fontFamily=Lucida Console;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FitnessApp/DailyLogApp&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;div&gt;&amp;nbsp;+ username:String&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ password:String&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ name:String&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ id:String&lt;/div&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ main(args:String[]):void&lt;/p&gt;" vertex="1">
-          <mxGeometry height="160" width="230" x="1060" y="670" as="geometry" />
+        <mxCell id="rgjosycCsPLYyy95wvTC-5" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;autosizeText=0;fontSize=12;fontFamily=Lucida Console;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FitnessApp/DailyLogApp&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;div&gt;&amp;nbsp;+ username:String&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ password:String&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ name:String&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ id:String&lt;/div&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ main(args:String[]):void&lt;/p&gt;" vertex="1">
+          <mxGeometry height="160" width="230" x="160" y="160" as="geometry" />
         </mxCell>
-        <mxCell id="wrpc7QFHN6ifa1H8zkVl-10" edge="1" parent="1" source="wrpc7QFHN6ifa1H8zkVl-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="wrpc7QFHN6ifa1H8zkVl-6">
-          <mxGeometry relative="1" x="0.3705" as="geometry">
+        <mxCell id="rgjosycCsPLYyy95wvTC-6" edge="1" parent="1" source="rgjosycCsPLYyy95wvTC-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.08;entryY=1.002;entryDx=0;entryDy=0;entryPerimeter=0;" target="rgjosycCsPLYyy95wvTC-2">
+          <mxGeometry relative="1" x="0.2911" as="geometry">
             <Array as="points">
-              <mxPoint x="815" y="1170" />
-              <mxPoint x="1455" y="1170" />
+              <mxPoint x="492.8" y="810" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="wrpc7QFHN6ifa1H8zkVl-11" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontFamily=Lucida Console;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;CaloriesIn&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;div&gt;&amp;nbsp;- meal_type:int&lt;/div&gt;&lt;div&gt;&amp;nbsp;- k_calories:int&lt;/div&gt;&lt;div&gt;&amp;nbsp;- protein:double&lt;/div&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ CaloriesIn(username:String, password:String, name:String, id:String)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getCalories():int&lt;/p&gt;" vertex="1">
-          <mxGeometry height="230" width="400" x="720" y="1340" as="geometry" />
+        <mxCell id="rgjosycCsPLYyy95wvTC-7" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontFamily=Lucida Console;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;CaloriesIn&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;div&gt;&amp;nbsp;- meal_type:int&lt;/div&gt;&lt;div&gt;&amp;nbsp;- k_calories:int&lt;/div&gt;&lt;div&gt;&amp;nbsp;- protein:double&lt;/div&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ CaloriesIn(username:String, password:String, name:String, id:String)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ setMeal_type():void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ setK_calories():void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ setProtein():void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getMeal_type():int&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getK_calories():int&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getProtein():int&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="230" width="400" x="40" y="740" as="geometry" />
         </mxCell>
-        <mxCell id="wrpc7QFHN6ifa1H8zkVl-12" edge="1" parent="1" source="wrpc7QFHN6ifa1H8zkVl-13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;curved=0;" target="wrpc7QFHN6ifa1H8zkVl-6">
+        <mxCell id="rgjosycCsPLYyy95wvTC-8" edge="1" parent="1" source="rgjosycCsPLYyy95wvTC-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;curved=0;" target="rgjosycCsPLYyy95wvTC-2">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1530" y="1210" />
-              <mxPoint x="1530" y="1210" />
+              <mxPoint x="620" y="710" />
+              <mxPoint x="620" y="710" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="wrpc7QFHN6ifa1H8zkVl-13" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontFamily=Lucida Console;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;CaloriesOut&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;div&gt;&amp;nbsp;- activity_type: int&lt;/div&gt;&lt;div&gt;&amp;nbsp;- steps:int&lt;/div&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ CaloriesOut(username:String, password:String, name:String, id:String)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getCaloriesOut():int&lt;/p&gt;" vertex="1">
-          <mxGeometry height="210" width="470" x="1260" y="1290" as="geometry" />
+        <mxCell id="rgjosycCsPLYyy95wvTC-9" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontFamily=Lucida Console;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;CaloriesOut&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;div&gt;&amp;nbsp;- activity_type: int&lt;/div&gt;&lt;div&gt;&amp;nbsp;- steps:int&lt;/div&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ CaloriesOut(username:String, password:String, name:String, id:String)&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ setActivity_type():void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ setSteps():void&lt;div&gt;&amp;nbsp;+ getActivity_type():int&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ getSteps():int&lt;/div&gt;&lt;/div&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="210" width="470" x="590" y="760" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
