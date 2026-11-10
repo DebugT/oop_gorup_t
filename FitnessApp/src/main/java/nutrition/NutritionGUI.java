@@ -60,7 +60,7 @@ public class NutritionGUI extends javax.swing.JFrame {
 
         backBtn.setBackground(new java.awt.Color(255, 153, 153));
         backBtn.setText("Back");
-        backBtn.setToolTipText("Go bakc to the main menu.");
+        backBtn.setToolTipText("Go back to the main menu.");
         backBtn.addActionListener(this::backBtnActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
