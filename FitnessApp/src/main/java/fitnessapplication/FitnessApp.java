@@ -22,7 +22,9 @@ public class FitnessApp {
         workout.setVisible(false);
         
         WorkoutHistory history = new WorkoutHistory();
-        history.setVisible(false);    
+        history.setVisible(false);
+        
+        
         
     }
 }
