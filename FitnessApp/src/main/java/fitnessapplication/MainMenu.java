@@ -5,6 +5,7 @@
 package fitnessapplication;
 
 import fitness.FitnessMenu;
+import sleep.SleepMenuGUI;
 import nutrition.NutritionGUI;
 
 /**
@@ -120,6 +121,10 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // Tristan code here:
+        // TODO add your handling code here:
+        SleepMenuGUI sleepGui = new SleepMenuGUI();
+        sleepGui.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
