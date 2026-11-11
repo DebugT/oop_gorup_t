@@ -8,8 +8,9 @@
  * @author Sasha-Clover
  */
 
-package fitnessapplication;
+package fitness;
 
+import fitnessapplication.MainMenu;
 import javax.swing.*;
 import java.awt.event.*; // listener for buttons
 import java.awt.Color; // settings for color
