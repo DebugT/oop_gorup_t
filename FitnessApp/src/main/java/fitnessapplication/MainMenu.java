@@ -5,7 +5,7 @@
 package fitnessapplication;
 
 import fitness.FitnessMenu;
-import sleep.SleepMenuGUI;
+import SleepTracker.SleepMenuGUI;
 import nutrition.NutritionGUI;
 
 /**
