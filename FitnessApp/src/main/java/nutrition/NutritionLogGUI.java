@@ -2,20 +2,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package fitnessapplication;
+package nutrition;
+
+import nutrition.NutritionGUI;
 
 /**
  *
  * @author enryu
  */
-public class CaloriesGUI extends javax.swing.JFrame {
+public class NutritionLogGUI extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(CaloriesGUI.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(NutritionLogGUI.class.getName());
 
     /**
-     * Creates new form CaloriesGUI
+     * Creates new form NutritionLogGUI
      */
-    public CaloriesGUI() {
+    public NutritionLogGUI() {
         initComponents();
     }
 
@@ -29,79 +31,88 @@ public class CaloriesGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        foodTF = new javax.swing.JTextField();
-        caloriesTF = new javax.swing.JTextField();
-        saveBtn = new javax.swing.JButton();
+        MainLabel = new javax.swing.JLabel();
+        displayLogTA = new javax.swing.JTextArea();
+        logsLbl = new javax.swing.JLabel();
         backBtn = new javax.swing.JButton();
+        logsCB = new javax.swing.JComboBox<>();
+        detailLbl = new javax.swing.JLabel();
+        validationLbl = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(300, 400));
 
-        jLabel1.setText("Calories Tracker");
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
 
-        jLabel2.setText("Food:");
+        MainLabel.setForeground(new java.awt.Color(255, 255, 255));
+        MainLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        MainLabel.setText("Nutrition Log");
 
-        jLabel3.setText("Calories:");
+        displayLogTA.setColumns(20);
+        displayLogTA.setRows(5);
 
-        foodTF.addActionListener(this::foodTFActionPerformed);
+        logsLbl.setForeground(new java.awt.Color(255, 255, 255));
+        logsLbl.setText("Logs:");
 
-        caloriesTF.addActionListener(this::caloriesTFActionPerformed);
-
-        saveBtn.setText("Save Calories");
-        saveBtn.addActionListener(this::saveBtnActionPerformed);
-
+        backBtn.setBackground(new java.awt.Color(255, 153, 153));
         backBtn.setText("Back");
         backBtn.addActionListener(this::backBtnActionPerformed);
+
+        logsCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        logsCB.addActionListener(this::logsCBActionPerformed);
+
+        detailLbl.setForeground(new java.awt.Color(255, 255, 255));
+        detailLbl.setText("Details:");
+
+        validationLbl.setForeground(new java.awt.Color(255, 255, 255));
+        validationLbl.setText("message:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel2))
-                .addGap(44, 44, 44)
+                .addContainerGap(142, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(saveBtn)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel1)
-                        .addComponent(foodTF)
-                        .addComponent(caloriesTF, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)))
-                .addContainerGap(111, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(backBtn)
-                .addGap(141, 141, 141))
+                    .addComponent(displayLogTA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(validationLbl)
+                    .addComponent(detailLbl)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(logsLbl)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(logsCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(MainLabel)))
+                    .addComponent(backBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(142, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(MainLabel)
+                .addGap(29, 29, 29)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(logsLbl)
+                    .addComponent(logsCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(foodTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(caloriesTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
-                .addComponent(saveBtn)
+                .addComponent(detailLbl)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(displayLogTA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(validationLbl)
                 .addGap(18, 18, 18)
                 .addComponent(backBtn)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(163, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -117,24 +128,16 @@ public class CaloriesGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void foodTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_foodTFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_foodTFActionPerformed
-
-    private void caloriesTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caloriesTFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_caloriesTFActionPerformed
-
-    private void saveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_saveBtnActionPerformed
-
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
         // TODO add your handling code here:
         NutritionGUI nutritionGui = new NutritionGUI();
         nutritionGui.setVisible(true);
         setVisible(false); // "hide" current window
     }//GEN-LAST:event_backBtnActionPerformed
+
+    private void logsCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logsCBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_logsCBActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,17 +161,17 @@ public class CaloriesGUI extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new CaloriesGUI().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new NutritionLogGUI().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel MainLabel;
     private javax.swing.JButton backBtn;
-    private javax.swing.JTextField caloriesTF;
-    private javax.swing.JTextField foodTF;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel detailLbl;
+    private javax.swing.JTextArea displayLogTA;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton saveBtn;
+    private javax.swing.JComboBox<String> logsCB;
+    private javax.swing.JLabel logsLbl;
+    private javax.swing.JLabel validationLbl;
     // End of variables declaration//GEN-END:variables
 }
