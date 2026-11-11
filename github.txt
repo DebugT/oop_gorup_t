@@ -1,0 +1,13 @@
+[github project repository:]
+https://github.com/DebugT/oop_gorup_t
+
+
+[collaborators:]
+alexander:
+https://github.com/Sasha-Clover
+
+tristan:
+https://github.com/DebugT
+
+andrei:
+https://github.com/S1lverCr0w
