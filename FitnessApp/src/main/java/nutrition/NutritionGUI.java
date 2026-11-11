@@ -43,22 +43,23 @@ public class NutritionGUI extends javax.swing.JFrame {
         setBackground(new java.awt.Color(0, 0, 0));
         setMinimumSize(new java.awt.Dimension(234, 300));
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setMinimumSize(new java.awt.Dimension(320, 320));
 
-        mainLbl.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        mainLbl.setForeground(new java.awt.Color(255, 255, 255));
+        mainLbl.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
         mainLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         mainLbl.setText("Nutrition Menu");
 
-        caloriesBtn.setBackground(new java.awt.Color(204, 204, 204));
+        caloriesBtn.setBackground(new java.awt.Color(28, 71, 115));
+        caloriesBtn.setForeground(new java.awt.Color(255, 255, 255));
         caloriesBtn.setText("Calories Tracker");
+        caloriesBtn.setPreferredSize(new java.awt.Dimension(180, 40));
         caloriesBtn.addActionListener(this::caloriesBtnActionPerformed);
 
-        logBtn.setBackground(new java.awt.Color(204, 204, 204));
+        logBtn.setBackground(new java.awt.Color(24, 99, 53));
+        logBtn.setForeground(new java.awt.Color(255, 255, 255));
         logBtn.setText("Nutrition Log");
         logBtn.addActionListener(this::logBtnActionPerformed);
 
-        backBtn.setBackground(new java.awt.Color(255, 153, 153));
         backBtn.setText("Back");
         backBtn.setToolTipText("Go back to the main menu.");
         backBtn.addActionListener(this::backBtnActionPerformed);
@@ -67,31 +68,27 @@ public class NutritionGUI extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 545, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addContainerGap(207, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(mainLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(caloriesBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(logBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(backBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE))
-                    .addContainerGap(207, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 121, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(mainLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(caloriesBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(backBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(logBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(114, 114, 114))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(mainLbl)
-                    .addGap(35, 35, 35)
-                    .addComponent(caloriesBtn)
-                    .addGap(18, 18, 18)
-                    .addComponent(logBtn)
-                    .addGap(45, 45, 45)
-                    .addComponent(backBtn)
-                    .addContainerGap(86, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(mainLbl)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addComponent(caloriesBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addComponent(logBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(73, 73, 73)
+                .addComponent(backBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

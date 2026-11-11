@@ -4,6 +4,10 @@
 
 package fitnessapplication;
 
+import fitness.WorkoutHistory;
+import fitness.AddWorkout;
+import fitness.FitnessMenu;
+
 /**
  *
  * @author alexk
