@@ -41,7 +41,7 @@ public class FitnessMenu extends JFrame {
         //------------------------------------------------------
         addButton = new JButton("Add Workout");
         addButton.setFocusPainted(false); // remove border near text
-        addButton.setBackground(new Color(46, 204, 113)); // color
+        addButton.setBackground(new Color(27, 79, 21)); // color
         addButton.setForeground(Color.WHITE);
         //------------------------------------------------------
         historyButton = new JButton("Workout History");
