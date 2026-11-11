@@ -40,6 +40,7 @@ public class NutritionLogGUI extends javax.swing.JFrame {
         validationLbl = new javax.swing.JLabel();
         seachLbl = new javax.swing.JLabel();
         seachTF = new javax.swing.JTextField();
+        searchBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(400, 600));
@@ -74,6 +75,8 @@ public class NutritionLogGUI extends javax.swing.JFrame {
 
         seachTF.addActionListener(this::seachTFActionPerformed);
 
+        searchBtn.setText("Search");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -94,7 +97,8 @@ public class NutritionLogGUI extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(MainLabel)
                             .addComponent(logsCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(backBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(backBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(searchBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(115, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -116,7 +120,9 @@ public class NutritionLogGUI extends javax.swing.JFrame {
                 .addComponent(displayLogTA, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(validationLbl)
-                .addGap(61, 61, 61)
+                .addGap(31, 31, 31)
+                .addComponent(searchBtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(backBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(189, Short.MAX_VALUE))
         );
@@ -191,6 +197,7 @@ public class NutritionLogGUI extends javax.swing.JFrame {
     private javax.swing.JLabel logsLbl;
     private javax.swing.JLabel seachLbl;
     private javax.swing.JTextField seachTF;
+    private javax.swing.JButton searchBtn;
     private javax.swing.JLabel validationLbl;
     // End of variables declaration//GEN-END:variables
 }
