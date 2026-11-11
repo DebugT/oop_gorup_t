@@ -4,6 +4,8 @@
  */
 package SleepTracker;
 
+import fitnessapplication.MainMenu;
+
 /**
  *
  * @author user
@@ -47,6 +49,7 @@ public class SleepMenuGUI extends javax.swing.JFrame {
         interruptionsTF = new javax.swing.JTextField();
         sleepGoalTF = new javax.swing.JTextField();
         saveBtn = new javax.swing.JButton();
+        homeBtn = new javax.swing.JButton();
         napPnl = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
@@ -62,6 +65,7 @@ public class SleepMenuGUI extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
         jButton2 = new javax.swing.JButton();
+        homeBtn1 = new javax.swing.JButton();
         logsPnl = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         jTextField11 = new javax.swing.JTextField();
@@ -70,11 +74,14 @@ public class SleepMenuGUI extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButton5 = new javax.swing.JButton();
+        homeBtn2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         titleLbl.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         titleLbl.setText("Night Sleep Log");
+
+        jTabbedPane1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
 
         logIdLbl.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         logIdLbl.setText("Log ID");
@@ -113,8 +120,17 @@ public class SleepMenuGUI extends javax.swing.JFrame {
 
         sleepGoalTF.addActionListener(this::sleepGoalTFActionPerformed);
 
+        saveBtn.setBackground(new java.awt.Color(0, 0, 102));
+        saveBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        saveBtn.setForeground(new java.awt.Color(255, 255, 255));
         saveBtn.setText("Save Night Sleep");
         saveBtn.addActionListener(this::saveBtnActionPerformed);
+
+        homeBtn.setBackground(new java.awt.Color(0, 153, 153));
+        homeBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        homeBtn.setForeground(new java.awt.Color(255, 255, 255));
+        homeBtn.setText("Back Home");
+        homeBtn.addActionListener(this::homeBtnActionPerformed);
 
         javax.swing.GroupLayout nightsleepPnlLayout = new javax.swing.GroupLayout(nightsleepPnl);
         nightsleepPnl.setLayout(nightsleepPnlLayout);
@@ -124,31 +140,33 @@ public class SleepMenuGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(nightsleepPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(nightsleepPnlLayout.createSequentialGroup()
-                        .addComponent(notesLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(nightsleepPnlLayout.createSequentialGroup()
                         .addGroup(nightsleepPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(nightsleepPnlLayout.createSequentialGroup()
-                                .addGroup(nightsleepPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(nightsleepPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(logIdLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(dateLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(durationLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(sleepQualityLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addComponent(interruptionsLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(sleepGoalLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(30, 30, 30)
-                                .addGroup(nightsleepPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(logIdTF, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE)
-                                    .addComponent(dateTF)
-                                    .addComponent(durationTF)
-                                    .addComponent(sleepQualityTF)
-                                    .addComponent(interruptionsTF)
-                                    .addComponent(sleepGoalTF)))
-                            .addComponent(saveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                            .addGroup(nightsleepPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(logIdLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(dateLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(durationLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(sleepQualityLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(interruptionsLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sleepGoalLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
+                        .addGroup(nightsleepPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(logIdTF, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE)
+                            .addComponent(dateTF)
+                            .addComponent(durationTF)
+                            .addComponent(sleepQualityTF)
+                            .addComponent(interruptionsTF)
+                            .addComponent(sleepGoalTF))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(nightsleepPnlLayout.createSequentialGroup()
+                        .addGroup(nightsleepPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(saveBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(notesLbl, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                        .addGroup(nightsleepPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, nightsleepPnlLayout.createSequentialGroup()
+                                .addComponent(homeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())))))
         );
         nightsleepPnlLayout.setVerticalGroup(
             nightsleepPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -182,7 +200,9 @@ public class SleepMenuGUI extends javax.swing.JFrame {
                     .addComponent(notesLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
-                .addComponent(saveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(nightsleepPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(saveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(homeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -218,14 +238,23 @@ public class SleepMenuGUI extends javax.swing.JFrame {
         jTextArea2.setRows(5);
         jScrollPane2.setViewportView(jTextArea2);
 
+        jButton2.setBackground(new java.awt.Color(0, 0, 102));
+        jButton2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Save Nap");
+
+        homeBtn1.setBackground(new java.awt.Color(0, 153, 153));
+        homeBtn1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        homeBtn1.setForeground(new java.awt.Color(255, 255, 255));
+        homeBtn1.setText("Back Home");
+        homeBtn1.addActionListener(this::homeBtn1ActionPerformed);
 
         javax.swing.GroupLayout napPnlLayout = new javax.swing.GroupLayout(napPnl);
         napPnl.setLayout(napPnlLayout);
         napPnlLayout.setHorizontalGroup(
             napPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(napPnlLayout.createSequentialGroup()
-                .addGroup(napPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(napPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(napPnlLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(napPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -251,7 +280,9 @@ public class SleepMenuGUI extends javax.swing.JFrame {
                                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(napPnlLayout.createSequentialGroup()
                         .addGap(17, 17, 17)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(homeBtn1)))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
         napPnlLayout.setVerticalGroup(
@@ -281,9 +312,11 @@ public class SleepMenuGUI extends javax.swing.JFrame {
                 .addGroup(napPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
+                .addGroup(napPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(homeBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27))
         );
 
         jTabbedPane1.addTab("Nap", napPnl);
@@ -293,8 +326,14 @@ public class SleepMenuGUI extends javax.swing.JFrame {
 
         jTextField11.addActionListener(this::jTextField11ActionPerformed);
 
+        jButton3.setBackground(new java.awt.Color(0, 102, 204));
+        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Search");
 
+        jButton4.setBackground(new java.awt.Color(0, 102, 204));
+        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Show All");
         jButton4.addActionListener(this::jButton4ActionPerformed);
 
@@ -311,8 +350,17 @@ public class SleepMenuGUI extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(jTable1);
 
+        jButton5.setBackground(new java.awt.Color(0, 0, 102));
+        jButton5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Delete Selected Log");
         jButton5.addActionListener(this::jButton5ActionPerformed);
+
+        homeBtn2.setBackground(new java.awt.Color(0, 153, 153));
+        homeBtn2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        homeBtn2.setForeground(new java.awt.Color(255, 255, 255));
+        homeBtn2.setText("Back Home");
+        homeBtn2.addActionListener(this::homeBtn2ActionPerformed);
 
         javax.swing.GroupLayout logsPnlLayout = new javax.swing.GroupLayout(logsPnl);
         logsPnl.setLayout(logsPnlLayout);
@@ -326,13 +374,16 @@ public class SleepMenuGUI extends javax.swing.JFrame {
                 .addGap(64, 64, 64))
             .addGroup(logsPnlLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(logsPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(logsPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(logsPnlLayout.createSequentialGroup()
+                        .addComponent(jButton5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(homeBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(logsPnlLayout.createSequentialGroup()
                         .addComponent(jButton3)
                         .addGap(18, 18, 18)
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         logsPnlLayout.setVerticalGroup(
@@ -347,10 +398,12 @@ public class SleepMenuGUI extends javax.swing.JFrame {
                     .addComponent(jButton3)
                     .addComponent(jButton4))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 259, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(198, Short.MAX_VALUE))
+                .addGroup(logsPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(homeBtn2, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("View Logs", logsPnl);
@@ -437,6 +490,26 @@ public class SleepMenuGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    private void homeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeBtnActionPerformed
+        // redirect user back to homepage
+        MainMenu myHome = new MainMenu();
+        myHome.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_homeBtnActionPerformed
+
+    private void homeBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeBtn2ActionPerformed
+        // TODO add your handling code here:
+        MainMenu myHome = new MainMenu();
+        myHome.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_homeBtn2ActionPerformed
+
+    private void homeBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeBtn1ActionPerformed
+       MainMenu myHome = new MainMenu();
+       myHome.setVisible(true);
+       setVisible(false);        
+    }//GEN-LAST:event_homeBtn1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -467,6 +540,9 @@ public class SleepMenuGUI extends javax.swing.JFrame {
     private javax.swing.JTextField dateTF;
     private javax.swing.JLabel durationLbl;
     private javax.swing.JTextField durationTF;
+    private javax.swing.JButton homeBtn;
+    private javax.swing.JButton homeBtn1;
+    private javax.swing.JButton homeBtn2;
     private javax.swing.JLabel interruptionsLbl;
     private javax.swing.JTextField interruptionsTF;
     private javax.swing.JButton jButton2;
